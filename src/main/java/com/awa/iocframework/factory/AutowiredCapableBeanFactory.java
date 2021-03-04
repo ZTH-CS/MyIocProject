@@ -47,7 +47,9 @@ public class AutowiredCapableBeanFactory extends AbstractBeanFactory{
                 if(refDefinition == null){
                     throw new BeanNotFoundException(beanReference.getName());
                 }
-                if(refDefinition.getBean() == null){
+
+                value = refDefinition.getBean();
+                if(value == null){
                     value = doCreateBean(refDefinition);
                 }
             }

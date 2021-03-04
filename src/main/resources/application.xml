@@ -9,5 +9,10 @@
     <bean id="man" class="com.awa.main.Bean.Man">
         <property name="name" value="Mr.Z"/>
         <property name="saySomething" ref="helloWorld"/>
+        <property name="hand" ref="hand"/>
+    </bean>
+
+    <bean id="hand" class="com.awa.main.Bean.Hand">
+        <property name="man" ref="man"/>
     </bean>
 </beans>
