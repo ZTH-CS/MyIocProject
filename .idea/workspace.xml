@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0e71517b-6d06-4927-8443-5a27af38d45b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/entity/BeanDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/entity/BeanDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/entity/Properties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/factory/AutowiredCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/factory/AutowiredCapableBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/awa/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/awa/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +89,7 @@
       <workItem from="1614734058357" duration="164000" />
       <workItem from="1614734359884" duration="8856000" />
       <workItem from="1614816287427" duration="13659000" />
-      <workItem from="1614912005050" duration="329000" />
+      <workItem from="1614912005050" duration="3448000" />
     </task>
     <servers />
   </component>
