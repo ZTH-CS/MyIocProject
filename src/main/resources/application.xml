@@ -3,16 +3,16 @@
 
     <component-scan base-package="com.awa.main.Bean"/>
 
-    <bean id="helloWorld" class="com.awa.main.Bean.HelloWorld" scope="prototype">
+    <bean name="helloWorld" class="com.awa.main.Bean.HelloWorld" scope="prototype">
     </bean>
 
-    <bean id="man" class="com.awa.main.Bean.Man">
+    <bean name="man" class="com.awa.main.Bean.Man">
         <property name="name" value="Mr.Z"/>
         <property name="saySomething" ref="helloWorld"/>
         <property name="hand" ref="hand"/>
     </bean>
 
-    <bean id="hand" class="com.awa.main.Bean.Hand">
+    <bean name="hand" class="com.awa.main.Bean.Hand">
         <property name="man" ref="man"/>
     </bean>
 </beans>

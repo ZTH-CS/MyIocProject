@@ -40,7 +40,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
 
     @Override
     public void loadBeanDefinitions(String location) throws Exception {
-        InputStream inputStream = getResourceLoader().getResource(location).getInputStream();
+        InputStream inputStream = getResourceLoader().getResourceInputStream(location);
         doLoadBeanDefinitions(inputStream);
     }
 
@@ -51,6 +51,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
      */
     private void doLoadBeanDefinitions(InputStream inputStream) throws Exception{
         try{
+            // 将inputStream解析为document
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document document = builder.parse(inputStream);
@@ -78,15 +79,18 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
      * @param root 节点
      */
     private void parseBeanDefinitions(Element root){
+        // 逐个节点进行解析
         NodeList nodeList = root.getChildNodes();
         String basePackage = null;
         for(int i = 0; i < nodeList.getLength(); i++){
             if(nodeList.item(i) instanceof Element){
                 Element ele = (Element) nodeList.item(i);
+                // 包括注解配置
                 if(ele.getTagName().equals("component-scan")){
                     basePackage = ele.getAttribute("base-package");
                     continue;
                 }
+                // 解析bean标签
                 if(ele.getTagName().equals("bean")){
                     processBeanDefinitions(ele);
                 }
@@ -102,7 +106,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
      * ================================================================*/
 
     private void processBeanDefinitions(Element element){
-        String name= element.getAttribute("id");
+        String name= element.getAttribute("name");
         String className = element.getAttribute("class");
         boolean isSingleton = true;
         if(element.hasAttribute("scope") && "prototype".equals(element.getAttribute("scope"))){

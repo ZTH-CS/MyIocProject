@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0e71517b-6d06-4927-8443-5a27af38d45b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/entity/BeanReference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/entity/BeanReference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/factory/AutowiredCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/factory/AutowiredCapableBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/io/ResourceLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/io/ResourceLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +42,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rumor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -90,6 +94,7 @@
       <workItem from="1614734359884" duration="8856000" />
       <workItem from="1614816287427" duration="13659000" />
       <workItem from="1614912005050" duration="3448000" />
+      <workItem from="1614929808746" duration="4429000" />
     </task>
     <servers />
   </component>
@@ -139,112 +144,112 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>53</line>
+          <line>54</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>55</line>
+          <line>56</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>57</line>
+          <line>58</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>71</line>
+          <line>72</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>82</line>
+          <line>84</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>95</line>
+          <line>99</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>112</line>
+          <line>116</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>128</line>
+          <line>132</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>135</line>
+          <line>139</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>150</line>
+          <line>154</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>152</line>
+          <line>156</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>210</line>
+          <line>214</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>212</line>
+          <line>216</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>217</line>
+          <line>221</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>225</line>
+          <line>229</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>229</line>
+          <line>233</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>252</line>
+          <line>256</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>264</line>
+          <line>268</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>273</line>
+          <line>277</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>289</line>
+          <line>293</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>297</line>
+          <line>301</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>311</line>
+          <line>315</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -309,37 +314,37 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>160</line>
+          <line>164</line>
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>158</line>
+          <line>162</line>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>177</line>
+          <line>181</line>
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>182</line>
+          <line>186</line>
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>195</line>
+          <line>199</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>191</line>
+          <line>195</line>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>285</line>
+          <line>289</line>
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -414,7 +419,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>86</line>
+          <line>89</line>
           <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -424,12 +429,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/io/ResourceLoader.java</url>
-          <line>14</line>
+          <line>15</line>
           <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>
-          <line>223</line>
+          <line>227</line>
           <option name="timeStamp" value="80" />
         </line-breakpoint>
       </breakpoints>

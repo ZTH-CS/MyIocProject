@@ -42,10 +42,10 @@ public class AutowiredCapableBeanFactory extends AbstractBeanFactory{
             Object value = property.getValue();
 
             if(value instanceof BeanReference){
-                BeanReference beanReference = (BeanReference) value;
-                BeanDefinition refDefinition = beanDefinitionMap.get(beanReference.getName());
+                String refName = ((BeanReference) value).getName();
+                BeanDefinition refDefinition = beanDefinitionMap.get(refName);
                 if(refDefinition == null){
-                    throw new BeanNotFoundException(beanReference.getName());
+                    throw new BeanNotFoundException(refName);
                 }
 
                 value = refDefinition.getBean();
