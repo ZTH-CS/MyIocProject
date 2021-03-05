@@ -105,6 +105,10 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
      * ====================解析XML文件中的Bean==========================
      * ================================================================*/
 
+    /**
+     * 解析XML里的Bean
+     * @param element XML里的Bean
+     */
     private void processBeanDefinitions(Element element){
         String name= element.getAttribute("name");
         String className = element.getAttribute("class");
@@ -120,6 +124,11 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
         getRegistry().put(name, bd);
     }
 
+    /**
+     * 解析Bean里的属性
+     * @param element XML元素
+     * @param bd Bean定义
+     */
     private void processProperties(Element element, BeanDefinition bd){
         NodeList list = element.getElementsByTagName("property");
         List<Property> properties = bd.getProperties();
@@ -149,7 +158,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
 
     /**
      * 解析注解
-     * @param basePackage 注解包名
+     * @param basePackage 需扫描的包
      */
     private void parseAnnotation(String basePackage){
         Set<Class<?>> classes = getClasses(basePackage);
@@ -158,6 +167,10 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
         }
     }
 
+    /**
+     * 根据注解解析Bean信息
+     * @param clazz Bean类型信息
+     */
     private void processAnnotationBeanDefinition(Class<?> clazz){
         if(clazz.isAnnotationPresent(Component.class)){
             String name = clazz.getAnnotation(Component.class).name();
@@ -178,6 +191,11 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
         }
     }
 
+    /**
+     * 根据注解解析Bean的属性
+     * @param clazz Bean的类型对象
+     * @param bd Bean的定义
+     */
     private void processAnnotationProperty(Class<?> clazz, BeanDefinition bd){
         Field[] fields = clazz.getDeclaredFields();
 
@@ -243,7 +261,13 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
         return classes;
     }
 
-    // 根据类文件扫描并加载包内的类
+    /**
+     * 扫描包下的类，利用包名反射获取Bean类型信息
+     * @param packageName 包名
+     * @param packagePath 包路径
+     * @param recursive 是否允许递归
+     * @param classes Bean类型信息集合
+     */
     private void findAndAddClassesInPackageByFile(String packageName,
                                                   String packagePath, final boolean recursive, Set<Class<?>> classes) {
         // 获取此包的目录 建立一个File
@@ -283,9 +307,16 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
         }
     }
 
-    // 根据jar文件扫描并加载类
+    /**
+     * 扫描jar文件
+     * @param packageName 包名
+     * @param packagePath 包路径
+     * @param jar jar包
+     * @param recursive 是否允许递归
+     * @param classes Bean类型信息
+     */
     private void findAndAddClassesInPackageByJar(String packageName,
-                                                 String directory, JarFile jar, boolean recursive, Set<Class<?>> classes){
+                                                 String packagePath, JarFile jar, boolean recursive, Set<Class<?>> classes){
         // 从此jar包 得到一个枚举类
         Enumeration<JarEntry> entries = jar.entries();
         // 同样的进行循环迭代
@@ -299,7 +330,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
                 name = name.substring(1);
             }
             // 如果前半部分和定义的包名相同
-            if (name.startsWith(directory)) {
+            if (name.startsWith(packagePath)) {
                 int idx = name.lastIndexOf('/');
                 // 如果以"/"结尾 是一个包
                 if (idx != -1) {
