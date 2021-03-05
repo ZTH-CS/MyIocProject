@@ -16,6 +16,9 @@ public class Main {
         woman.doSomething();
         Hand hand = (Hand) applicationContext.getBean("hand");
         hand.handMan();
+
+        String code = "59H1JKR4x1lZ";
+        System.out.println(code.hashCode());
     }
 
 }

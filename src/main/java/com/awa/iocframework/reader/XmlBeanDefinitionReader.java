@@ -4,7 +4,6 @@ import com.awa.iocframework.annotation.*;
 import com.awa.iocframework.entity.BeanDefinition;
 import com.awa.iocframework.entity.BeanReference;
 import com.awa.iocframework.entity.Property;
-import com.awa.iocframework.entity.Properties;
 import com.awa.iocframework.io.ResourceLoader;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -23,6 +22,7 @@ import java.net.URL;
 import java.net.URLDecoder;
 import java.util.Enumeration;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
@@ -118,7 +118,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
 
     private void processProperties(Element element, BeanDefinition bd){
         NodeList list = element.getElementsByTagName("property");
-        Properties properties = bd.getProperties();
+        List<Property> properties = bd.getProperties();
         for(int i = 0; i < list.getLength(); i++){
             Node node = list.item(i);
             if(node instanceof Element){
@@ -126,14 +126,14 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
                 String name = ele.getAttribute("name");
                 String value = ele.getAttribute("value");
                 if(value != null && value.length() > 0){
-                    properties.addProperty(new Property(name, value));
+                    properties.add(new Property(name, value));
                 }else{
                     String ref = ele.getAttribute("ref");
                     if(ref == null || ref.equals("")){
                         throw new IllegalArgumentException("Configuration problem: <property> element for property '" + name + "' must specify a ref or value");
                     }
                     BeanReference br = new BeanReference(ref);
-                    properties.addProperty(new Property(name, br));
+                    properties.add(new Property(name, br));
                 }
             }
         }
@@ -181,7 +181,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
             String name = field.getName();
             if(field.isAnnotationPresent(Value.class)){
                 String value = field.getAnnotation(Value.class).value();
-                bd.getProperties().addProperty(new Property(name, value));
+                bd.getProperties().add(new Property(name, value));
             }else if(field.isAnnotationPresent(Autowired.class)){
                 if(field.isAnnotationPresent(Qualifier.class)){
                     String ref = field.getAnnotation(Qualifier.class).value();
@@ -189,11 +189,11 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
                         throw new IllegalArgumentException("the value of Qualifier should not be null!");
                     }
                     BeanReference br = new BeanReference(ref);
-                    bd.getProperties().addProperty(new Property(name, br));
+                    bd.getProperties().add(new Property(name, br));
                 }else{
                     String ref = field.getType().getName();
                     BeanReference br = new BeanReference(ref);
-                    bd.getProperties().addProperty(new Property(name, br));
+                    bd.getProperties().add(new Property(name, br));
                 }
             }
         }

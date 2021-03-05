@@ -1,5 +1,8 @@
 package com.awa.iocframework.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author awa
  *
@@ -20,7 +23,7 @@ public class BeanDefinition {
     private boolean isSingleton;
 
     // bean的属性列表
-    private Properties properties;
+    private List<Property> properties;
 
     public BeanDefinition() {
     }
@@ -58,9 +61,9 @@ public class BeanDefinition {
         isSingleton = singleton;
     }
 
-    public Properties getProperties() {
+    public List<Property> getProperties() {
         if(properties == null){
-            properties = new Properties();
+            properties = new ArrayList<>();
         }
         return properties;
     }

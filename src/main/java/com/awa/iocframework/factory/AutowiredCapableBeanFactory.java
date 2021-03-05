@@ -37,7 +37,7 @@ public class AutowiredCapableBeanFactory extends AbstractBeanFactory{
      * @throws Exception 可能发生的异常
      */
     private void applyPropertyList(Object bean, BeanDefinition beanDefinition) throws Exception{
-        for(Property property : beanDefinition.getProperties().getPropertyList()){
+        for(Property property : beanDefinition.getProperties()){
             Field field = bean.getClass().getDeclaredField(property.getName());
             Object value = property.getValue();
 
