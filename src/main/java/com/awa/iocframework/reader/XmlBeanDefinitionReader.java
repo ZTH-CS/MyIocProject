@@ -4,7 +4,7 @@ import com.awa.iocframework.annotation.*;
 import com.awa.iocframework.entity.BeanDefinition;
 import com.awa.iocframework.entity.BeanReference;
 import com.awa.iocframework.entity.Property;
-import com.awa.iocframework.io.UrlResourceLoader;
+import com.awa.iocframework.resource.UrlResource;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -34,13 +34,13 @@ import java.util.jar.JarFile;
  */
 public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
 
-    public XmlBeanDefinitionReader(UrlResourceLoader urlResourceLoader) {
-        super(urlResourceLoader);
+    public XmlBeanDefinitionReader(UrlResource urlResource) {
+        super(urlResource);
     }
 
-    @Override
-    public void loadBeanDefinitions(String location) throws Exception {
-        InputStream inputStream = getUrlResourceLoader().getResourceInputStream(location);
+
+    public void loadBeanDefinitions() throws Exception {
+        InputStream inputStream = getUrlResource().getInputStream();
         doLoadBeanDefinitions(inputStream);
     }
 
@@ -121,7 +121,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
         processProperties(element, bd);
         bd.setBeanClassName(className);
         bd.setSingleton(isSingleton);
-        getRegistry().put(name, bd);
+        getBeanDefinitionCache().put(name, bd);
     }
 
     /**
@@ -187,7 +187,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
             processAnnotationProperty(clazz, bd);
             bd.setBeanClassName(className);
             bd.setSingleton(isSingleton);
-            getRegistry().put(name, bd);
+            getBeanDefinitionCache().put(name, bd);
         }
     }
 

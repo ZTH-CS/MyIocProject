@@ -3,7 +3,7 @@ package com.awa.iocframework.context;
 import com.awa.iocframework.entity.BeanDefinition;
 import com.awa.iocframework.factory.AbstractBeanFactory;
 import com.awa.iocframework.factory.AutowiredCapableBeanFactory;
-import com.awa.iocframework.io.UrlResourceLoader;
+import com.awa.iocframework.resource.UrlResource;
 import com.awa.iocframework.reader.XmlBeanDefinitionReader;
 
 import java.util.Map;
@@ -47,11 +47,11 @@ public class ClassPathXmlApplicationContext extends AbstractApplicationContext {
      * @throws Exception 可能发生的异常
      */
     private AbstractBeanFactory obtainBeanFactory() throws Exception{
-        XmlBeanDefinitionReader xmlBeanDefinitionReader = new XmlBeanDefinitionReader(new UrlResourceLoader());
-        xmlBeanDefinitionReader.loadBeanDefinitions(location);
+        XmlBeanDefinitionReader xmlBeanDefinitionReader = new XmlBeanDefinitionReader(new UrlResource(location));
+        xmlBeanDefinitionReader.loadBeanDefinitions();
         AbstractBeanFactory beanFactory = new AutowiredCapableBeanFactory();
 
-        for(Map.Entry<String, BeanDefinition> entry : xmlBeanDefinitionReader.getRegistry().entrySet()){
+        for(Map.Entry<String, BeanDefinition> entry : xmlBeanDefinitionReader.getBeanDefinitionCache().entrySet()){
             beanFactory.registerBeanDefinition(entry.getKey(), entry.getValue());
         }
         return beanFactory;

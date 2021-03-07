@@ -4,8 +4,11 @@
     <list default="true" id="0e71517b-6d06-4927-8443-5a27af38d45b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/context/ClassPathXmlApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/context/ClassPathXmlApplicationContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/io/ResourceLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/io/UrlResourceLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/io/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/resource/Resource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/io/UrlResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/resource/UrlResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/io/UrlResourceLoader.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/AbstractBeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/AbstractBeanDefinitionReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/BeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/BeanDefinitionReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,7 +44,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rumor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -97,7 +100,9 @@
       <workItem from="1614949558186" duration="2571000" />
       <workItem from="1615026992897" duration="737000" />
       <workItem from="1615032317431" duration="4072000" />
-      <workItem from="1615075996571" duration="2145000" />
+      <workItem from="1615075996571" duration="2731000" />
+      <workItem from="1615105503628" duration="890000" />
+      <workItem from="1615126851425" duration="1984000" />
     </task>
     <servers />
   </component>
@@ -121,12 +126,12 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/io/UrlResource.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/resource/UrlResource.java</url>
           <line>21</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/io/UrlResource.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/resource/UrlResource.java</url>
           <line>23</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
@@ -351,7 +356,7 @@
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/io/UrlResource.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/resource/UrlResource.java</url>
           <line>22</line>
           <option name="timeStamp" value="58" />
         </line-breakpoint>
@@ -429,11 +434,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/factory/AutowiredCapableBeanFactory.java</url>
           <line>57</line>
           <option name="timeStamp" value="77" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/io/UrlResourceLoader.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/awa/iocframework/reader/XmlBeanDefinitionReader.java</url>

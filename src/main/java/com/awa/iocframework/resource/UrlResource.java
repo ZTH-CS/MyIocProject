@@ -1,4 +1,4 @@
-package com.awa.iocframework.io;
+package com.awa.iocframework.resource;
 
 import java.io.InputStream;
 import java.net.URL;
@@ -13,8 +13,8 @@ public class UrlResource implements Resource {
 
     private URL url;
 
-    public UrlResource(URL url) {
-        this.url = url;
+    public UrlResource(String location) {
+        url = this.getClass().getClassLoader().getResource(location);
     }
 
     @Override

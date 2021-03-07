@@ -1,4 +1,4 @@
-package com.awa.iocframework.io;
+package com.awa.iocframework.resource;
 
 import java.io.InputStream;
 

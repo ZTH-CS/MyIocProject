@@ -1,7 +1,7 @@
 package com.awa.iocframework.reader;
 
 import com.awa.iocframework.entity.BeanDefinition;
-import com.awa.iocframework.io.UrlResourceLoader;
+import com.awa.iocframework.resource.UrlResource;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,20 +13,20 @@ import java.util.Map;
  */
 public abstract class AbstractBeanDefinitionReader implements BeanDefinitionReader {
 
-    private Map<String, BeanDefinition> registry;
+    private Map<String, BeanDefinition> beanDefinitionCache;
 
-    private UrlResourceLoader urlResourceLoader;
+    private UrlResource urlResource;
 
-    public AbstractBeanDefinitionReader(UrlResourceLoader urlResourceLoader) {
-        this.registry = new HashMap<>();
-        this.urlResourceLoader = urlResourceLoader;
+    public AbstractBeanDefinitionReader(UrlResource urlResource) {
+        this.beanDefinitionCache = new HashMap<>();
+        this.urlResource = urlResource;
     }
 
-    public Map<String, BeanDefinition> getRegistry() {
-        return registry;
+    public Map<String, BeanDefinition> getBeanDefinitionCache() {
+        return beanDefinitionCache;
     }
 
-    public UrlResourceLoader getUrlResourceLoader() {
-        return urlResourceLoader;
+    public UrlResource getUrlResource() {
+        return urlResource;
     }
 }
