@@ -4,7 +4,7 @@ import com.awa.iocframework.annotation.*;
 import com.awa.iocframework.entity.BeanDefinition;
 import com.awa.iocframework.entity.BeanReference;
 import com.awa.iocframework.entity.Property;
-import com.awa.iocframework.io.ResourceLoader;
+import com.awa.iocframework.io.UrlResourceLoader;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -34,13 +34,13 @@ import java.util.jar.JarFile;
  */
 public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
 
-    public XmlBeanDefinitionReader(ResourceLoader resourceLoader) {
-        super(resourceLoader);
+    public XmlBeanDefinitionReader(UrlResourceLoader urlResourceLoader) {
+        super(urlResourceLoader);
     }
 
     @Override
     public void loadBeanDefinitions(String location) throws Exception {
-        InputStream inputStream = getResourceLoader().getResourceInputStream(location);
+        InputStream inputStream = getUrlResourceLoader().getResourceInputStream(location);
         doLoadBeanDefinitions(inputStream);
     }
 

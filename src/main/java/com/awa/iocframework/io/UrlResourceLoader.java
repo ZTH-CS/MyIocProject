@@ -8,7 +8,7 @@ import java.net.URL;
  *
  * @author awa
  */
-public class ResourceLoader {
+public class UrlResourceLoader {
 
     public InputStream getResourceInputStream(String location) throws Exception {
         // 根据当前类路径获取url地址
